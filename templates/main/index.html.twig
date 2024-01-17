@@ -1,3 +1,13 @@
-<div>
-	<h2>{{variabile}}</h2>
-</div>
+{# dichiaro che questo file estendera il file madre #}
+{% extends 'base.html.twig' %}
+
+{# richiamo i blocco di codice per estendere il file madre #}
+{% block body %}
+	<div>
+		<h2>{{variabile}}</h2>
+	</div>
+{% endblock %}
+
+
+{% block title %}Ho cambiato il titolo
+{% endblock %}
