@@ -3,9 +3,18 @@
 
 {# richiamo i blocco di codice per estendere il file madre #}
 {% block body %}
-	<div>
-		<h2>{{variabile}}</h2>
-	</div>
+
+	{% if variabili|length > 0  %}
+		{% for variabile in variabili %}
+			<div>
+				<h2>{{variabile}}</h2>
+			</div>
+		{% endfor %}
+	{% else %}
+		<h2>Non ci sono saluti</h2>
+	{% endif %}
+
+
 {% endblock %}
 
 
