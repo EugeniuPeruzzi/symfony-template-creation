@@ -5,9 +5,9 @@
 {% block body %}
 
 	{% if variabili|length > 0  %}
-		{% for variabile in variabili|slice(0, limit) %}
+		{% for key,variabile in variabili|slice(0, limit) %}
 			<div>
-				<h2>{{variabile.message}}</h2>
+				<a href=" {{ path('app_show_one', {id: key}) }} ">{{variabile.message}}</a>
 			</div>
 
 			{{ include('main/_variabili.html.twig', {message:  variabile}) }}
@@ -15,7 +15,6 @@
 	{% else %}
 		<h2>Non ci sono saluti</h2>
 	{% endif %}
-
 
 {% endblock %}
 
