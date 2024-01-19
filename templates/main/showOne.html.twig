@@ -5,7 +5,10 @@
 {% block body %}
 	<div>
 		<h2>Il messaggio e:</h2>
-		<storng>{{message}}</strong>
+		<storng>{{xxx.message}}</strong>
+		{{ include('main/_variabili.html.twig',  {message:  xxx}) }}
+
+
 	</div>
 
 {% endblock %}
