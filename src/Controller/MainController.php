@@ -18,7 +18,10 @@ class MainController extends AbstractController{
         // La variabile 'variabile' contiene una stringa ottenuta unendo gli elementi dell'array $this->messages fino al limite specificato
         return $this->render(
             'main/index.html.twig',
-            ['variabili' => array_slice($this->messages, 0, $limit)]
+            [
+                'variabili' => $this->messages,
+                'limit' => $limit
+            ]
         );
     
         // Se si desidera restituire direttamente una risposta senza il rendering del template, è possibile utilizzare la seguente riga:

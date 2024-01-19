@@ -5,7 +5,7 @@
 {% block body %}
 
 	{% if variabili|length > 0  %}
-		{% for variabile in variabili %}
+		{% for variabile in variabili|slice(0, limit) %}
 			<div>
 				<h2>{{variabile}}</h2>
 			</div>
